@@ -1,0 +1,258 @@
+.main{
+
+    display: block;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #985277;
+    border-radius: 25px;
+    padding: 15px;  
+    margin: 10px;
+    border : solid black 2px;
+}
+
+body{
+
+   
+}
+
+#allDiv{
+    /* padding: 2px;
+    display: block;
+    border: solid 2px black; */
+    margin: 10px;
+    text-align: left;
+}
+
+
+.studentImg{
+    height:35px;
+    width: 35px;
+    display: inline;
+    
+
+}
+
+
+.card{
+    margin: 5px;
+    width: 200px
+}
+
+.studentDiv{
+
+    width: 330px;
+   /* display: inline-block; */
+    
+    border: 2px black solid;
+    float: left;
+    padding: 10px;
+    border-radius : 25px;
+    background-color: #726DF9;
+}
+   
+.singleDiv{
+
+    border: 1px solid black;
+    padding: 8px;
+    width: 200px;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius : 25px;
+    background-color: #726DF9;
+}
+
+.adminDiv{
+
+    width: 330px;
+    /* display: inline-block; */
+    background-color: #726DF9;
+     border: 2px black solid;
+     float: left;
+     padding: 10px;
+}
+
+.courseDiv{
+
+   
+    width: 250px;
+    /* display: inline-block; */
+    background-color: #726DF9;
+    border: 2px black solid;
+    float: left;
+    padding: 10px;
+    border-radius : 25px;
+    margin: 8px;
+
+}
+
+
+.cardNew{
+    width: 20%;
+    display: inline-block;
+}
+
+.mainContainerDiv{
+
+    width: 400px;
+    background-color: #726DF9;
+   /* display: inline-block; */
+    color: red(252, 174, 174);
+    border: 2px black solid;
+    float: left;
+    padding: 15px;
+    margin: 8px;
+    border-radius : 25px;
+}
+
+.adminDiv{
+
+    padding: 10px;
+    margin: 8px;
+    border-radius : 25px;
+
+
+}
+
+#mainContainer{
+    color: black;
+
+}
+
+#allStudents{
+
+    width: 20%;
+}
+
+#allAdmins{
+
+    width: 20%;
+}
+
+
+.courseDetailsImg{
+    margin: 8px;
+    width: 200px;
+    height: 100psx; 
+}
+
+.studentDetailsImg{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+}
+
+.form-control{
+
+    width: 300px;
+}
+
+.row1{
+
+    
+    float: left;
+}
+
+.loginDiv{
+
+    padding: 15px;
+    margin: 20px;
+    display: block;
+    text-align: center;
+}
+
+.loginForm{
+
+    text-align: center;
+}
+
+#studentCardTemplate{
+   
+    padding: 5px;
+}
+
+.headers{
+    display: inline-block;
+    width: 30%;
+}
+.card{
+   
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    padding: 10px;
+}
+
+#img1{
+    width: 200px;
+    height: 200px;
+}
+
+  .card:hover, .card:focus, .card:active {
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    background-color: #403687;
+  }
+
+ .logoImg1{
+     width: 60px;
+     height: 30px;
+   
+ }
+
+ .form-group1{
+    text-align: center;
+    
+ }
+
+
+ #studentCourse{
+
+    border: solid black 2px;
+    padding: 10px;
+
+ }
+
+ #studentInCourseDiv{
+
+    border: solid black 2px;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 25px;
+
+ }
+
+ #image-field{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+
+ }
+
+ .courseInroll{
+
+    text-align: center;
+    padding: 8px;
+    margin: 8px;
+    border: 2px solid black;
+
+ }
+
+ #buttonx {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    display: block;
+    margin: 10px;
+
+}

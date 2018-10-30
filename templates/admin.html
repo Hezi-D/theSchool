@@ -1,0 +1,117 @@
+<h1> Admin Page:</h1>
+<br>
+
+<div class="mainHeader">
+    <ul>
+        <li class="headers">
+            <h4>Administrators
+                <button type="button" class="btn btn-primary" onclick="addDraw ('addAdmin', 'mainContainer')">+</button>
+            </h4>
+        </li>
+
+        <li class="headers">
+            <h4>Main Container</h4>
+        </li>
+    </ul>
+</div>
+
+
+<div class="adminDiv">
+
+
+    <div id="allAdmins">
+
+
+    </div>
+
+</div>
+
+
+<div class="mainContainerDiv">
+    <div id="mainContainer">
+        <div id="numOfAdmin">
+
+        </div>
+    </div>
+</div>
+
+
+<div style="display: none">
+    <div class="card" style="width: 18rem" id="adminCardTemplate">
+
+        <!-- <img id="img" class="studentImg" src="" alt="Card image cap"> -->
+        <p id="name" class="card-text"></p>
+        <p id="role" class="card-text"></p>
+        <p id="email" class="card-text"></p>
+
+    </div>
+</div>
+
+
+<div id="addAdminForm" style="display:none">
+    <form>
+        <h3>Add new Adminstrator:</h3>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Admin Name:</label>
+            <input type="text" class="form-control" id="adminTitle" placeholder="Student Name">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Phone</label>
+            <input type="text" class="form-control" id="adminPhone" placeholder="Phone">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Email</label>
+            <input type="text" class="form-control" id="adminEmail" placeholder="Email">
+        </div>S
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Role</label>
+            <input type="text" class="form-control" id="adminRole" placeholder="Role">
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="addNewAdmin()">Add</button>
+    </form>
+</div>
+
+<div id="editAdminForm" style="display:none">
+    <form method="POST">
+        <h3>Edit this Admin:</h3>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput">Admin Name:</label>
+            <input type="text" class="form-control" id="adminName" placeholder="Admin Name">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Phone</label>
+            <input type="text" class="form-control" id="adminPhone" placeholder="Phone">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Email</label>
+            <input type="text" class="form-control" id="adminEmail" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Role</label>
+
+            <select id="adminRole">
+                <option value="1205">manager</option>
+                <option value="1210">sales</option>
+            </select>
+        </div>
+
+
+        <div class="form-group" style="display:none">
+            <label for="formGroupExampleInput2">ID</label>
+            <input type="number" class="form-control" id="adminId" placeholder="Image link">
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="updateTheAdminDetails(document.getElementById('adminId').value)">Save</button>
+
+        <button type="button" id="deleteAdminButton" class="btn btn-danger" onclick="deleteTheCurAdmin(document.getElementById('adminId').value)">Delete</button>
+
+    </form>
+</div>

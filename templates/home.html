@@ -1,0 +1,277 @@
+<h1> Welcome To Our Home Page:</h1>
+<br>
+
+<div class="mainHeader">
+    <ul>
+        <li class="headers">
+            <h4>Courses
+                <button type="button" class="btn btn-primary" onclick="addDraw ('addCourse', 'mainContainer')">+</button>
+            </h4>
+        </li>
+
+        <li class="headers">
+            <h4>Students
+                <button type="button" class="btn btn-primary" onclick="addDraw ('addStudent', 'mainContainer')">+</button>
+            </h4>
+        </li>
+
+        <li class="headers">
+            <h4>Main Container</h4>
+        </li>
+    </ul>
+</div>
+
+
+
+
+<div class="courseDiv">
+
+
+    <div id="allCourses">
+
+
+    </div>
+
+</div>
+
+
+
+<div class="studentDiv">
+
+
+    <div id="allStudents">
+
+
+    </div>
+</div>
+
+
+
+<div class="mainContainerDiv">
+
+    <div id="mainContainer">
+
+        <div id="numOfStudents">
+
+
+        </div>
+
+        <div id="numOfCourses">
+
+
+        </div>
+
+        <div id="studentInCourse">
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<div style="display: none">
+    <div class="card" style="width: 16rem" id="studentCardTemplate">
+
+        <img id="imgStudent" class="studentImg" src="" alt="Card image cap">
+        <p id="nameStudent" class="card-text"></p>
+        <p id="phoneStudent" class="card-text"></p>
+        <p id="emailStudent" class="card-text"></p>
+
+    </div>
+</div>
+
+<div style="display: none">
+    <div class="card" style="width: 20rem" id="studentDetailsCardTemplate">
+
+        <img id="img1" class="studentImg" src="" alt="Card image cap">
+        <p id="name1" class="card-text"></p>
+        <p id="phone1" class="card-text"></p>
+        <p id="email1" class="card-text"></p>
+        <p> <strong> Course Enrolled: </strong> </p>
+        <div id="studentCourse"></div>
+
+        <div>
+            <button type="button" class="btn btn-dark" id="editBtn">EDIT</button>
+        </div>
+    </div>
+</div>
+
+<div style="display: none">
+    <div id="courseCardTemplate" style="width: 12rem" class="card">
+
+        <img id="img" class="studentImg" src="" alt="Card image cap">
+        <p id="name" class="card-text"></p>
+    </div>
+</div>
+
+
+<div id="addCourseForm" style="display:none">
+    <form>
+        <h3>Add new Course:</h3>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Course Name:</label>
+            <input type="text" class="form-control" id="courseTitle" placeholder="Course Name">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Description</label>
+            <input type="text" class="form-control" id="courseDesc" placeholder="Description">
+        </div>
+
+        <div>
+            <div>
+                <img src="http://localhost/PROJECT2.1/img/site/empty-user.png" id="image-field">
+            </div>
+            <br>
+
+        </div>
+        Select image :
+        <form enctype="multipart/form-data">
+            <input type="file" name="file" multiple size="50" onchange="previewImage(event)">
+        </form>
+
+        <br>
+
+        <div>
+            <button type="button" class="btn btn-primary" onclick="addNewCourse()">Add</button>
+        </div>
+    </form>
+</div>
+
+<div id="addStudentForm" style="display:none">
+    <form>
+        <h3>Add new Student:</h3>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Student Name:</label>
+            <input type="text" class="form-control" id="studentTitle" placeholder="Student Name">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Phone</label>
+            <input type="text" class="form-control" id="studentPhone" placeholder="Phone">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Email</label>
+            <input type="text" class="form-control" id="studentEmail" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+            <div>
+                <div>
+                    <img src="http://localhost/PROJECT2.1/img/site/empty-user.png" id="image-field">
+                </div>
+                <br>
+            </div>
+
+            Select student image :
+            <form enctype="multipart/form-data">
+                <input type="file" name="file" multiple size="50" onchange="previewImage(event)">
+            </form>
+
+            <button type="button" class="btn btn-primary" onclick="addNewStudent()">Add</button>
+    </form>
+</div>
+
+<div id="editCourseForm" style="display:none">
+    <form method="POST">
+        <h3>Edit this course:</h3>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Course Name:</label>
+            <input type="text" class="form-control" id="courseTitle" placeholder="Course Name">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Description</label>
+            <input type="text" class="form-control" id="courseDesc" placeholder="Description">
+        </div>
+        <div class="form-group">
+
+            <div>
+                <div>
+                    <img src="http://localhost/PROJECT2.1/img/site/empty-user.png" id="image-field">
+                </div>
+                <br>
+            </div>
+
+            <p>Upload Image</p>
+            <form enctype="multipart/form-data">
+
+                <input type="text" name="curId" id="curStudentId" style="display:none">
+                <input type="file" name="file" multiple size="50" onchange="previewImage(event)">
+
+            </form>
+
+
+        </div>
+
+        <div class="form-group" style="display:none">
+            <label for="formGroupExampleInput2">ID</label>
+            <input type="number" class="form-control" id="courseId" placeholder="Image link">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Student In this course:</label>
+            <div id="studentInThisCourse"></div>
+
+
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="updateTheCourseDetails(document.getElementById('courseId').value)">Save</button>
+
+        <button type="button" class="btn btn-danger" id="deleteCourseBtn" onclick="deleteTheCurCourse(document.getElementById('courseId').value)">Delete</button>
+
+    </form>
+</div>
+
+
+<div id="editStudentForm" style="display:none">
+    <form method="POST">
+        <h3>Edit this student details:</h3>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Student Name:</label>
+            <input type="text" class="form-control" id="studentTitle" placeholder="Student Name">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Phone</label>
+            <input type="text" class="form-control" id="studentPhone" placeholder="Phone">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Email</label>
+            <input type="text" class="form-control" id="studentEmail" placeholder="Email">
+        </div>
+        <div class="form-group">
+
+            <div>
+                <div>
+                    <img src="http://localhost/PROJECT2.1/img/site/empty-user.png" id="image-field">
+                </div>
+                <br>
+            </div>
+
+            Select student image :
+            <form enctype="multipart/form-data">
+
+                <input type="text" name="curId" id="curStudentId" style="display:none">
+                <input type="file" name="file" multiple size="50" onchange="previewImage(event)">
+
+            </form>
+
+
+        </div>
+
+        <div class="form-group" style="display:none">
+            <label for="formGroupExampleInput2">ID</label>
+            <input type="number" class="form-control" id="studentId" placeholder="Image link">
+        </div>
+
+        <div class="form-group">
+            <label for="formGroupExampleInput2">Courses List</label>
+            <div id="coursesList"></div>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="updateTheStudentDetails(document.getElementById('studentId').value)">Save</button>
+
+        <button type="button" id="deleteBtnStudent" class="btn btn-danger" onclick="deleteTheCurStudent(document.getElementById('studentId').value)">Delete</button>
+
+    </form>
+</div>
